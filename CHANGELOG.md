@@ -9,6 +9,7 @@
 
 ## Bug Fixes
 
+* **css:** Fix bug with new select box and footer language select (#584)
 * **css:** Embiggen the modal close button (#557)
 * **css:** Center the notification bar in larger viewports
 * **css:** Button line-height bug fix
@@ -18,6 +19,8 @@
 
 * Styled form inputs now include bottom spacing. If you have added this spacing to your forms in another way (for example, wrapping them in paragraph tags) you could end up with double spacing.
 * Find and replace `mzp-t-small` to `mzp-t-md` on buttons.
+* The new select box styles include the down arrow as a background image. If you have declared a `background` or `background-image` for selects locally that should be removed.
+* Add `mzp-t-dark` to `<form class="mzp-c-language-switcher">` (or to any other parent element) to get a brighter focus ring on the language select box.
 
 # 11.0.2
 
