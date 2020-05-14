@@ -26,7 +26,7 @@ $symbol-spacing: calc(1.5em + #{$spacing-sm * 2});
 $select-bg: linear-gradient(to bottom, $color-white 0%, $color-white 100%); // must keep gradient to avoid bugs
 $select-bg-disabled: linear-gradient(to bottom, $color-marketing-gray-10 0%, $color-marketing-gray-10 100%);
 
-@mixin form-label() {
+@mixin field-label() {
     @include text-body-sm;
     display: block;
     font-weight: bold;
@@ -37,7 +37,8 @@ $select-bg-disabled: linear-gradient(to bottom, $color-marketing-gray-10 0%, $co
 
 @mixin form-info() {
     @include text-body-sm;
-    margin: 0; // remove default element margin (eg paragraph)
+    display: block;
+    font-weight: normal;
 }
 
 @mixin form-input() {

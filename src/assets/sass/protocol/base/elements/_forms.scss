@@ -92,7 +92,6 @@ textarea {
 // Element styles
 
 fieldset {
-    color: $form-text;
     margin-bottom: $field-v-spacing;
     min-width: 0; // https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
     width: 100%;
@@ -100,19 +99,16 @@ fieldset {
 
 legend {
     @include text-body-lg;
-    color: $form-text;
     font-weight: bold;
     margin-bottom: $field-v-spacing;
 
     .mzp-t-firefox & {
         @include font-firefox;
-        color: $color-ink-80;
     }
 }
 
 label {
-    @include form-label();
-    color: $form-text;
+    @include field-label();
 }
 
 
@@ -375,7 +371,7 @@ fieldset {
 
 legend {
     .mzp-u-inline & {
-        @include form-label();
+        @include field-label();
     }
 }
 
@@ -387,9 +383,7 @@ label {
 }
 
 .mzp-c-fieldnote {
-    @include text-body-sm;
-    display: block;
-    font-weight: normal;
+    @include form-info;
 
     .mzp-is-error & {
         color: $form-red;
@@ -411,6 +405,10 @@ label {
     color: $color-white;
     padding: $spacing-sm;
     margin-bottom: $spacing-xl;
+
+    .mzp-c-form-header + & {
+        margin-top: $spacing-xl;
+    }
 
     :last-child {
         margin-bottom: 0;
